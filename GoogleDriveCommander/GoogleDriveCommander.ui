@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GoogleDriveCommander</class>
+ <widget class="QMainWindow" name="GoogleDriveCommander">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GoogleDriveCommander</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QProgressBar" name="importProgressBar">
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>385</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTableView" name="tableView"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButtonDelete">
+          <property name="text">
+           <string>Delete</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonNew">
+          <property name="text">
+           <string>New</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonUpload">
+          <property name="text">
+           <string>Upload</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>tableView</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>GoogleDriveCommander</receiver>
+   <slot>tableViewDoubleClicked(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>519</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>620</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonDelete</sender>
+   <signal>clicked()</signal>
+   <receiver>GoogleDriveCommander</receiver>
+   <slot>deleteFileDirItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>528</x>
+     <y>566</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>588</x>
+     <y>604</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonNew</sender>
+   <signal>clicked()</signal>
+   <receiver>GoogleDriveCommander</receiver>
+   <slot>startCreatingNewGoogleDriveItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>658</x>
+     <y>566</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>618</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonUpload</sender>
+   <signal>clicked()</signal>
+   <receiver>GoogleDriveCommander</receiver>
+   <slot>startUploadFileInGoogleDrive()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>736</x>
+     <y>556</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>741</x>
+     <y>639</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>tableViewDoubleClicked(QModelIndex)</slot>
+  <slot>deleteFileDirItem()</slot>
+  <slot>startCreatingNewGoogleDriveItem()</slot>
+  <slot>startUploadFileInGoogleDrive()</slot>
+ </slots>
+</ui>

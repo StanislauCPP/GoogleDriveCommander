@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewGoogleDriveItemDialog</class>
+ <widget class="QDialog" name="NewGoogleDriveItemDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>386</width>
+    <height>168</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>38</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditItemName"/>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>38</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxItemType"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>lineEditItemName</sender>
+   <signal>returnPressed()</signal>
+   <receiver>NewGoogleDriveItemDialog</receiver>
+   <slot>newItemNameEntered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>175</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxItemType</sender>
+   <signal>textActivated(QString)</signal>
+   <receiver>NewGoogleDriveItemDialog</receiver>
+   <slot>itemTypeActivated(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxItemType</sender>
+   <signal>textHighlighted(QString)</signal>
+   <receiver>NewGoogleDriveItemDialog</receiver>
+   <slot>itemTypeHighlighted(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>314</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>364</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>newItemNameEntered()</slot>
+  <slot>itemTypeActivated(QString)</slot>
+  <slot>itemTypeHighlighted(QString)</slot>
+ </slots>
+</ui>
