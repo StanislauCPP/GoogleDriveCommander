@@ -29,7 +29,7 @@ private:
             queryApplicationResponseType            = "code",
             queryApplicationState                   = "state_parameter_passthrough_value",
             queryApplicationRedirectUri             = "http://localhost",
-            queryApplicationClientID                = "74401920343-qgicosqqpvj2pl6ppcijgermllpb9v6p.apps.googleusercontent.com";
+            queryApplicationClientID                = "";
 
 private slots:
     void codeFromUrl(QUrl);
