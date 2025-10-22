@@ -8,13 +8,7 @@ include_granted_scopes=true&
 response_type=code&
 state=state_parameter_passthrough_value&
 redirect_uri=http://localhost&
-client_id=74401920343-qgicosqqpvj2pl6ppcijgermllpb9v6p.apps.googleusercontent.com
-
-Perhaps, I'll make implementation of user login and consent via WebEngine
-
-After completing the OAuth 2.0 flow, you should be redirected to
-
-http://localhost/?state=state_parameter_passthrough_value&code=4/0AWtgzh4jkiQjZCI5lowSavhIvtgCe5moH4QREmwxS2S1eFA80NmrAoSxkz512I2Exyt2Bg&scope=https://www.googleapis.com/auth/drive
+client_id=
 */
 
 #include <QDebug>
